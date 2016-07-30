@@ -1,2 +1,0 @@
-python go.py
-pause
