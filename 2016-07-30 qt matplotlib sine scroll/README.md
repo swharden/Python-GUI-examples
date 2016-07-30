@@ -1,4 +1,4 @@
-# GUI demo: live data display with PyQT4, matplotlib, and MatplotlibWidget
+# Live data display with MatplotlibWidget
 
 This is a minimal-case example how to get a PyQt4 GUI (designed with QT Designer) to display a matploblit widget and update it automatically. This was tested with the WinPython 3.x distribution, but should be cross platform.
 
