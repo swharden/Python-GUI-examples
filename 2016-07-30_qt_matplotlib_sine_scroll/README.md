@@ -9,14 +9,3 @@ WinPython 3.x distribution, but should be cross platform.
 * run ui_convert.py to turn ui_main.ui into ui_main.py
 * run go.py to launch the program (pulling UI from ui_main.py)
 * if the "keep updating" box is checked and the add buttin is hit, it does more and more!
-
-## Authors
-
-### Scott Harden
-
-* gitub: [swharden] (https://github.com/swharden)
-* website: [www.SWHarden.com] (http://www.SWHarden.com)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
