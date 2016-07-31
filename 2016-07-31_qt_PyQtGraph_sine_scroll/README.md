@@ -1,6 +1,8 @@
 # PyQtGraph GraphWidget demo
 This was tested to be ~40x faster than a similar matplotlib graph
 
+PROJECT PAGE: http://www.swharden.com/wp/2016-07-31-live-data-in-pyqt4-with-plotwidget/
+
 This is a minimal-case example how to get a PyQt4 GUI (designed with QT Designer) to display a 
 pyqtgraph PlotWidget and update it automatically. This was tested with the WinPython 3.x distribution, 
 but should be cross platform. Read the parent readme for full project details.
