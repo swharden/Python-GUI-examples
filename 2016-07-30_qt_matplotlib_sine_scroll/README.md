@@ -5,4 +5,4 @@ This is a minimal-case example how to get a PyQt4 GUI (designed with QT Designer
 * run go.py to launch the program (pulling UI from ui_main.py)
 * if the "keep updating" box is checked and the add buttin is hit, it does more and more!
 
-![demo](http://www.swharden.com/wp/wp-content/uploads/2016/07/demo.gif)
+![demo](demo.gif)
