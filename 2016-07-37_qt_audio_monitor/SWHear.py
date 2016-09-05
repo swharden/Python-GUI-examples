@@ -19,7 +19,7 @@ def getFFT(data,rate):
     fft=np.fft.fft(data)
     fft=np.abs(fft)
     #fft=10*np.log10(fft)
-    freq=np.fft.fftfreq(len(fft),1/rate)
+    freq=np.fft.fftfreq(len(fft),1.0/rate)
     return freq[:int(len(freq)/2)],fft[:int(len(fft)/2)]
 
 class SWHear(object):
@@ -86,7 +86,7 @@ class SWHear(object):
             print("guessing a valid microphone device/rate...")
             self.device=self.valid_input_devices()[0] #pick the first one
             self.rate=self.valid_low_rate(self.device)
-        self.datax=np.arange(self.chunk)/self.rate
+        self.datax=np.arange(self.chunk)/float(self.rate)
         msg='recording from "%s" '%self.info["name"]
         msg+='(device %d) '%self.device
         msg+='at %d Hz'%self.rate
