@@ -7,11 +7,8 @@ check my githib for a more complete version:
 
 import pyaudio
 import time
-import pylab
 import numpy as np
 import threading
-import scipy
-import scipy.fftpack
 
 def getFFT(data,rate):
     """Given some data and rate, returns FFTfreq and FFT (half)."""
@@ -22,16 +19,28 @@ def getFFT(data,rate):
     freq=np.fft.fftfreq(len(fft),1.0/rate)
     return freq[:int(len(freq)/2)],fft[:int(len(fft)/2)]
 
-class SWHear(object):
+class SWHear():
     """
-    The SWHear class is made to provide access to continuously recorded
+    The SWHear class is provides access to continuously recorded
     (and mathematically processed) microphone data.
+    
+    Arguments:
+        
+        device - the number of the sound card input to use. Leave blank
+        to automatically detect one.
+        
+        rate - sample rate to use. Defaults to something supported.
+        
+        updatesPerSecond - how fast to record new data. Note that smaller
+        numbers allow more data to be accessed and therefore high
+        frequencies to be analyzed if using a FFT later
     """
 
-    def __init__(self,device=None,rate=None):
-        """fire up the SWHear class."""
+    def __init__(self,device=None,rate=None,updatesPerSecond=10):
         self.p=pyaudio.PyAudio()
-        self.chunk = 4096 # number of data points to read at a time
+        self.chunk=4096 # gets replaced automatically
+        self.updatesPerSecond=updatesPerSecond
+        self.chunksRead=0
         self.device=device
         self.rate=rate
 
@@ -82,6 +91,7 @@ class SWHear(object):
             self.device=self.valid_input_devices()[0] #pick the first one
         if self.rate is None:
             self.rate=self.valid_low_rate(self.device)
+        self.chunk = int(self.rate/self.updatesPerSecond) # hold one tenth of a second in memory
         if not self.valid_test(self.device,self.rate):
             print("guessing a valid microphone device/rate...")
             self.device=self.valid_input_devices()[0] #pick the first one
@@ -119,6 +129,7 @@ class SWHear(object):
             self.stream.close()
             self.p.terminate()
             print(" -- stream STOPPED")
+        self.chunksRead+=1
 
     def stream_thread_new(self):
         self.t=threading.Thread(target=self.stream_readchunk)
@@ -137,9 +148,12 @@ class SWHear(object):
         self.stream_thread_new()
 
 if __name__=="__main__":
-    ear=SWHear()
+    ear=SWHear(updatesPerSecond=10) # optinoally set sample rate here
     ear.stream_start() #goes forever
+    lastRead=ear.chunksRead
     while True:
-        print(ear.data)
-        time.sleep(.1)
+        while lastRead==ear.chunksRead:
+            time.sleep(.01)
+        print(ear.chunksRead,len(ear.data))
+        lastRead=ear.chunksRead
     print("DONE")
