@@ -15,6 +15,4 @@ A hodgepodge collection of bare-bones examples for performing common GUI-related
 * website: [www.SWHarden.com] (http://www.SWHarden.com)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-edited
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
