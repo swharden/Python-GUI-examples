@@ -16,3 +16,6 @@ A hodgepodge collection of bare-bones examples for performing common GUI-related
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Working with UI files:
+https://github.com/awesomebytes/python_qt_tutorial/blob/master/README.md#script-the-behaviour
