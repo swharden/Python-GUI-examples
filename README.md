@@ -6,7 +6,6 @@ A hodgepodge collection of bare-bones examples for performing common GUI-related
 [scrolling live data with MatplotlibWidget](2016-07-30_qt_matplotlib_sine_scroll) - pretty graphs, but slow | [scrolling live data with PlotWidget](2016-07-31_qt_PyQtGraph_sine_scroll) - extremely high speed graphing
 --- | ---
 ![](2016-07-30_qt_matplotlib_sine_scroll/demo.gif) | ![](2016-07-31_qt_PyQtGraph_sine_scroll/demo2.gif)
---- | ---
 
 ## Realtime Audio Analysis
 [live PCM and FFT plotting with QtGraph](https://github.com/swharden/Python-GUI-examples/tree/master/2016-07-37_qt_audio_monitor)
