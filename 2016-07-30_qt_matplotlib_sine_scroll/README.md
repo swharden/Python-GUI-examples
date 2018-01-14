@@ -11,3 +11,6 @@ This is a minimal-case example how to get a PyQt4 GUI (designed with QT Designer
 * if the "keep updating" box is checked and the add buttin is hit, it does more and more!
 
 ![demo](demo.gif)
+
+### Misc notes
+If you get `ImportError: No module named 'matplotlibwidget'`, ensure you are in the same folder as `matplotlibwidget.py` which is now provided with this example.
