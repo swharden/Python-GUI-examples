@@ -1,5 +1,5 @@
 # Python-GUI-examples
-A hodgepodge collection of bare-bones examples for performing common GUI-related tasks in python. Emphasis on linear data plotting, image processing, and frequency analysis. Examples are often accompanied by posts on www.SWHarden.com
+This repository is a collection of minimal-case examples for performing common GUI-related tasks in python. Emphasis on linear data plotting, image processing, and audio/frequency analysis.
 
 Description | Screenshot
 ---|---
