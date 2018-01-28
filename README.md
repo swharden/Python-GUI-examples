@@ -1,5 +1,5 @@
 # Python-GUI-examples
-This repository is a collection of minimal-case examples for performing common GUI-related tasks in python. Emphasis on linear data plotting, image processing, and audio/frequency analysis.
+This repository is a collection of minimal-case examples for performing common GUI-related tasks in python. Emphasis is placed on tasks involving linear data plotting, image processing, and audio/frequency analysis.
 
 Description | Screenshot
 ---|---
