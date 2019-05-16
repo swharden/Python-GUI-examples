@@ -8,3 +8,13 @@ This is a minimal-case example how to get continuous PCM data from the sound car
 Youtube demo: https://youtu.be/lDS9rI0o6mM
 
 ![demo](demo.gif)
+
+### Input overflow error?
+If you experience _[Errno -9981] Input overflowed_ errors, consider modifying [this line](https://github.com/swharden/Python-GUI-examples/blob/master/2016-07-37_qt_audio_monitor/SWHear.py#L119) and change:
+```python
+self.stream.read(self.chunk)
+```
+to:
+```python
+self.stream.read(self.chunk, exception_on_overflow=False)
+```
