@@ -1,4 +1,4 @@
-from PyQt4 import uic
+from PyQt5 import uic
 import glob
 for fname in glob.glob("*.ui"):
     print("converting",fname)
