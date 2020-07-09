@@ -9,6 +9,10 @@ Youtube demo: https://youtu.be/lDS9rI0o6mM
 
 ![demo](demo.gif)
 
+### Setup
+* pyaudio (which requires [portaudio](http://portaudio.com/)) comes ready to use if you install Anaconda
+* I did have to `conda install pyqtgraph pyaudio`
+
 ### Input overflow error?
 If you experience _[Errno -9981] Input overflowed_ errors, consider modifying [this line](https://github.com/swharden/Python-GUI-examples/blob/master/2016-07-37_qt_audio_monitor/SWHear.py#L119) and change:
 ```python
